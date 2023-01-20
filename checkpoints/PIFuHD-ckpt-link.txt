@@ -1,0 +1,1 @@
+https://dl.fbaipublicfiles.com/pifuhd/checkpoints/pifuhd.pt
