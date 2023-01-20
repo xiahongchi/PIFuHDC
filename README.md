@@ -58,7 +58,7 @@ sh ./scripts/download_trained_model.sh
 python apps/batch_openpose.py -d {openpose_root_path} -i {path_of_images} -o {path_of_images}
 ```
 
-2. run the following script to run reconstruction code. Make sure to set `--input_path` to `path_of_images`, `--out_path` to where you want to dump out results, `--ckpt_path` to the PIFuHD checkpoint and `--ckpt_path_Color ` to the PIFuHDC net_C_HD.pt checkpoint.
+2. run the following script to run reconstruction code. Make sure to set `--input_path` to `path_of_images`, `--out_path` to where you want to dump out results, `--ckpt_path` to the PIFuHD checkpoint and `--ckpt_path_Color` to the PIFuHDC net_C_HD.pt checkpoint.
 ```
 python -m apps.test_colorHD.py
 ```
