@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Although algorithms based on PIFu has already been able to reconstruct 3D human shape through constructing and learning a neural network representing a pixel-aligned implicit function and are usually memory-efficient, PIFu can only reconstruct the low-resolution shape and color texture of human and PIFuHD can only reconstruct the high-resolution of human shape. 
+Although algorithms based on PIFu has already been able to reconstruct 3D human shape through constructing and learning a neural network representing a pixel-aligned implicit function and are usually memory-efficient, PIFu can only reconstruct the low-resolution shape and color texture of human and PIFuHD can only reconstruct the high-resolution of human shape.
 
-This repo introduces a brand new reconstruction algorithm called Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization with Colorization (PIFuHDC), aiming to reconstruct both high-resolution human shape and color texture. 
+This repo introduces a brand new reconstruction algorithm called Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization with Colorization (PIFuHDC), aiming to reconstruct both high-resolution human shape and color texture.
 
 PIFuHDC not only blends the advantages of PIFu and PIFuHD, but also employs the ability of reconstructing high-resolution human shape inherited from PIFuHD and introduces a brand new pixel-aligned implicit function to reconstruct the high-resolution RGB color texture, which is easy to train and adjust, and PIFuHDC can well perform the task of reconstructing high-resolution 3D human shape with high-resolution color texture.![](images/net.jpg)
 
@@ -34,14 +34,20 @@ For visualization
 - freeglut (use `sudo apt-get install freeglut3-dev` for ubuntu users)
 - ffmpeg
 
-Note: At least 8GB GPU memory is recommended to run PIFuHD model. 
+Note: At least 8GB GPU memory is recommended to run PIFuHD model.
 
 Run the following code to install all pip packages:
 ```sh
 pip install -r requirements.txt 
 ```
 
+## 🔧 Windows Installation
 
+If you are a Windows user, you can now follow a complete, working guide for installing and running PIFuHDC with OpenPose and OpenGL:
+
+👉 [INSTALL_WINDOWS.md](INSTALL_WINDOWS.md)
+
+---
 
 ## Download Pre-trained model
 
@@ -53,7 +59,7 @@ sh ./scripts/download_trained_model.sh
 
 ## Testing
 
-1. run the following script to get joints for each image for testing (joints are used for image cropping only.). Make sure you correctly set the location of OpenPose binary. 
+1. run the following script to get joints for each image for testing (joints are used for image cropping only.). Make sure you correctly set the location of OpenPose binary.
 ```
 python apps/batch_openpose.py -d {openpose_root_path} -i {path_of_images} -o {path_of_images}
 ```
